@@ -147,20 +147,20 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Status_10 {get { return GetParameter(10); }set { SetParameter(10, value); }}
 	/// <summary>PID: 10  | Type: read | DISCREETS: Not Available = 0, Enabled = 1</summary>
 	public System.Object Status {get { return GetParameter(10); }set { SetParameter(10, value); }}
-	/// <summary>PID: 11  | Type: read</summary>
+	/// <summary>PID: 11  | Type: read | DISCREETS: Not Available = 0, 128 Mpbs = 1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Currentcompressedbitrateencoder_11 {get { return GetParameter(11); }set { SetParameter(11, value); }}
-	/// <summary>PID: 11  | Type: read</summary>
+	/// <summary>PID: 11  | Type: read | DISCREETS: Not Available = 0, 128 Mpbs = 1</summary>
 	public System.Object Currentcompressedbitrateencoder {get { return GetParameter(11); }set { SetParameter(11, value); }}
 	/// <summary>PID: 12  | Type: read | DISCREETS: Not Available = 0, Enabled = 1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Autochromaweight_12 {get { return GetParameter(12); }set { SetParameter(12, value); }}
 	/// <summary>PID: 12  | Type: read | DISCREETS: Not Available = 0, Enabled = 1</summary>
 	public System.Object Autochromaweight {get { return GetParameter(12); }set { SetParameter(12, value); }}
-	/// <summary>PID: 13  | Type: read | EXCEPTIONS: Not Available = 0</summary>
+	/// <summary>PID: 13  | Type: read | DISCREETS: Not Available = 0, 24 = 1 | EXCEPTIONS: Not Available = 0</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Chromaweight_13 {get { return GetParameter(13); }set { SetParameter(13, value); }}
-	/// <summary>PID: 13  | Type: read | EXCEPTIONS: Not Available = 0</summary>
+	/// <summary>PID: 13  | Type: read | DISCREETS: Not Available = 0, 24 = 1 | EXCEPTIONS: Not Available = 0</summary>
 	public System.Object Chromaweight {get { return GetParameter(13); }set { SetParameter(13, value); }}
 	/// <summary>PID: 14  | Type: read | DISCREETS: Not Available = 0, Enabled = 1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
@@ -172,25 +172,25 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Decoderstatus_15 {get { return GetParameter(15); }set { SetParameter(15, value); }}
 	/// <summary>PID: 15  | Type: read | DISCREETS: Not Available = 0, Enabled = 1</summary>
 	public System.Object Decoderstatus {get { return GetParameter(15); }set { SetParameter(15, value); }}
-	/// <summary>PID: 16  | Type: read</summary>
+	/// <summary>PID: 16  | Type: read | DISCREETS: Not Available = 0, 128 Mpbs = 1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Currentcompressedbitratedecoder_16 {get { return GetParameter(16); }set { SetParameter(16, value); }}
-	/// <summary>PID: 16  | Type: read</summary>
+	/// <summary>PID: 16  | Type: read | DISCREETS: Not Available = 0, 128 Mpbs = 1</summary>
 	public System.Object Currentcompressedbitratedecoder {get { return GetParameter(16); }set { SetParameter(16, value); }}
 	/// <summary>PID: 17  | Type: read | DISCREETS: LCRP = 0, RLCP = 1, RPCL = 2, PCRL = 3, CPRL = 4,  = 5 | EXCEPTIONS: Not Available = 5</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Progressionorder_17 {get { return GetParameter(17); }set { SetParameter(17, value); }}
 	/// <summary>PID: 17  | Type: read | DISCREETS: LCRP = 0, RLCP = 1, RPCL = 2, PCRL = 3, CPRL = 4,  = 5 | EXCEPTIONS: Not Available = 5</summary>
 	public System.Object Progressionorder {get { return GetParameter(17); }set { SetParameter(17, value); }}
-	/// <summary>PID: 18  | Type: read</summary>
+	/// <summary>PID: 18  | Type: read | DISCREETS: Not Available = 0, 512 = 1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Codeblockwidth_18 {get { return GetParameter(18); }set { SetParameter(18, value); }}
-	/// <summary>PID: 18  | Type: read</summary>
+	/// <summary>PID: 18  | Type: read | DISCREETS: Not Available = 0, 512 = 1</summary>
 	public System.Object Codeblockwidth {get { return GetParameter(18); }set { SetParameter(18, value); }}
-	/// <summary>PID: 19  | Type: read</summary>
+	/// <summary>PID: 19  | Type: read | DISCREETS: Not Available = 0, 512 = 1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Codeblockheight_19 {get { return GetParameter(19); }set { SetParameter(19, value); }}
-	/// <summary>PID: 19  | Type: read</summary>
+	/// <summary>PID: 19  | Type: read | DISCREETS: Not Available = 0, 512 = 1</summary>
 	public System.Object Codeblockheight {get { return GetParameter(19); }set { SetParameter(19, value); }}
 	/// <summary>PID: 20  | Type: fixed</summary>
 	public System.Object Fixedzero__fixed {get { return GetParameter(20); }set { SetParameter(20, value); }}

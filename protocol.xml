@@ -25,7 +25,7 @@
 			<Type>dummy</Type>
 		</Param>
 		<Param id="10" trending="false">
-			<Name>status</Name>
+			<Name>Status</Name>
 			<Description>Encoder Status</Description>
 			<Type>read</Type>
 			<Information>
@@ -61,7 +61,7 @@
 			</Measurement>
 		</Param>
 		<Param id="110" setter="true">
-			<Name>status</Name>
+			<Name>Status</Name>
 			<Description>Encoder Status</Description>
 			<Type>write</Type>
 			<Interprete>
@@ -94,7 +94,7 @@
 			</Measurement>
 		</Param>
 		<Param id="11" trending="false">
-			<Name>currentCompressedBitrateEncoder</Name>
+			<Name>CurrentCompressedBitrateEncoder</Name>
 			<Description>Current Compressed Bitrate</Description>
 			<Type>read</Type>
 			<Information>
@@ -103,7 +103,7 @@
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>128Mpbs</DefaultValue>
+				<DefaultValue>1</DefaultValue>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -118,11 +118,21 @@
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type>number</Type>
+				<Type>discreet</Type>
+				<Discreets>
+					<Discreet>
+						<Display>Not Available</Display>
+						<Value>0</Value>
+					</Discreet>
+					<Discreet>
+						<Display>128 Mpbs</Display>
+						<Value>1</Value>
+					</Discreet>
+				</Discreets>
 			</Measurement>
 		</Param>
 		<Param id="12" trending="false">
-			<Name>autoChromaWeight</Name>
+			<Name>AutoChromaWeight</Name>
 			<Description>Auto Chroma Weight</Description>
 			<Type>read</Type>
 			<Information>
@@ -158,7 +168,7 @@
 			</Measurement>
 		</Param>
 		<Param id="112" setter="true">
-			<Name>autoChromaWeight</Name>
+			<Name>AutoChromaWeight</Name>
 			<Description>description</Description>
 			<Type>write</Type>
 			<Interprete>
@@ -191,7 +201,7 @@
 			</Measurement>
 		</Param>
 		<Param id="13" trending="false">
-			<Name>chromaWeight</Name>
+			<Name>ChromaWeight</Name>
 			<Description>Chroma Weight</Description>
 			<Type>read</Type>
 			<Information>
@@ -224,11 +234,21 @@
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type>analog</Type>
+				<Type>discreet</Type>
+				<Discreets>
+					<Discreet>
+						<Display>Not Available</Display>
+						<Value>0</Value>
+					</Discreet>
+					<Discreet>
+						<Display>24</Display>
+						<Value>1</Value>
+					</Discreet>
+				</Discreets>
 			</Measurement>
 		</Param>
 		<Param id="113" setter="true">
-			<Name>chromaWeight</Name>
+			<Name>ChromaWeight</Name>
 			<Description>description</Description>
 			<Type>write</Type>
 			<Interprete>
@@ -256,7 +276,7 @@
 			</Measurement>
 		</Param>
 		<Param id="14" trending="false">
-			<Name>losslessMode</Name>
+			<Name>LosslessMode</Name>
 			<Description>Lossless Mode</Description>
 			<Type>read</Type>
 			<Information>
@@ -292,7 +312,7 @@
 			</Measurement>
 		</Param>
 		<Param id="15" trending="false">
-			<Name>decoderStatus</Name>
+			<Name>DecoderStatus</Name>
 			<Description>Decoder Status</Description>
 			<Type>read</Type>
 			<Information>
@@ -328,7 +348,7 @@
 			</Measurement>
 		</Param>
 		<Param id="115" setter="true">
-			<Name>decoderStatus</Name>
+			<Name>DecoderStatus</Name>
 			<Description>Decoder Status</Description>
 			<Type>write</Type>
 			<Interprete>
@@ -362,7 +382,7 @@
 		</Param>
 
 		<Param id="16" trending="false">
-			<Name>currentCompressedBitrateDecoder</Name>
+			<Name>CurrentCompressedBitrateDecoder</Name>
 			<Description>Current Compressed Bitrate</Description>
 			<Type>read</Type>
 			<Information>
@@ -371,7 +391,7 @@
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>128Mpbs</DefaultValue>
+				<DefaultValue>0</DefaultValue>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -380,13 +400,23 @@
 				<Positions>
 					<Position>
 						<Page>General</Page>
-						<Column>0</Column>
+						<Column>1</Column>
 						<Row>1</Row>
 					</Position>
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type>number</Type>
+				<Type>discreet</Type>
+				<Discreets>
+					<Discreet>
+						<Display>Not Available</Display>
+						<Value>0</Value>
+					</Discreet>
+					<Discreet>
+						<Display>128 Mpbs</Display>
+						<Value>1</Value>
+					</Discreet>
+				</Discreets>
 			</Measurement>
 		</Param>
 		<Param id="17" trending="false">
@@ -413,7 +443,7 @@
 					<Position>
 						<Page>General</Page>
 						<Column>1</Column>
-						<Row>1</Row>
+						<Row>2</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -462,7 +492,7 @@
 					<Position>
 						<Page>General</Page>
 						<Column>1</Column>
-						<Row>1</Row>
+						<Row>2</Row>
 					</Position>
 				</Positions>
 			</Display>
@@ -502,34 +532,7 @@
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>28</DefaultValue>
-			</Interprete>
-			<Display>
-				<RTDisplay>true</RTDisplay>
-				<Units>px</Units>
-				<Positions>
-					<Position>
-						<Page>General</Page>
-						<Column>1</Column>
-						<Row>2</Row>
-					</Position>
-				</Positions>
-			</Display>
-			<Measurement>
-				<Type>number</Type>
-			</Measurement>
-		</Param>
-		<Param id="19" trending="false">
-			<Name>codeBlockHeight</Name>
-			<Description>Code Block Height</Description>
-			<Type>read</Type>
-			<Information>
-			</Information>
-			<Interprete>
-				<RawType>numeric text</RawType>
-				<Type>double</Type>
-				<LengthType>next param</LengthType>
-				<DefaultValue>28</DefaultValue>
+				<DefaultValue>0</DefaultValue>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -543,7 +546,54 @@
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type>number</Type>
+				<Type>discreet</Type>
+				<Discreets>
+					<Discreet>
+						<Display>Not Available</Display>
+						<Value>0</Value>
+					</Discreet>
+					<Discreet>
+						<Display>512</Display>
+						<Value>1</Value>
+					</Discreet>
+				</Discreets>
+			</Measurement>
+		</Param>
+		<Param id="19" trending="false">
+			<Name>codeBlockHeight</Name>
+			<Description>Code Block Height</Description>
+			<Type>read</Type>
+			<Information>
+			</Information>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+				<DefaultValue>0</DefaultValue>
+			</Interprete>
+			<Display>
+				<RTDisplay>true</RTDisplay>
+				<Units>px</Units>
+				<Positions>
+					<Position>
+						<Page>General</Page>
+						<Column>1</Column>
+						<Row>4</Row>
+					</Position>
+				</Positions>
+			</Display>
+			<Measurement>
+				<Type>discreet</Type>
+				<Discreets>
+					<Discreet>
+						<Display>Not Available</Display>
+						<Value>0</Value>
+					</Discreet>
+					<Discreet>
+						<Display>512</Display>
+						<Value>1</Value>
+					</Discreet>
+				</Discreets>
 			</Measurement>
 		</Param>
 		<Param id="20">
@@ -635,6 +685,7 @@
 			<Condition>
 				<![CDATA[id:10 == 0]]>
 			</Condition>
+			<!--This needs to be replaced transered to group-->
 			<Content>
 				<Id>3</Id>
 				<Id>4</Id>
@@ -644,6 +695,7 @@
 				<Id>16</Id>
 				<Id>17</Id>
 				<Id>18</Id>
+				<Id>22</Id>
 			</Content>
 		</Trigger>
 		<Trigger id="4">
@@ -663,6 +715,7 @@
 				<Id>13</Id>
 				<Id>14</Id>
 				<Id>15</Id>
+				<Id>21</Id>
 			</Content>
 		</Trigger>
 		<Trigger id="5">
@@ -681,6 +734,7 @@
 				<Id>7</Id>
 				<Id>8</Id>
 				<Id>19</Id>
+				<Id>21</Id>
 			</Content>
 		</Trigger>
 		<Trigger id="6">
@@ -692,11 +746,12 @@
 				<![CDATA[id:15 == 1]]>
 			</Condition>
 			<Content>
-				
+
 				<Id>20</Id>
 				<Id>18</Id>
 				<Id>17</Id>
 				<Id>16</Id>
+				<Id>22</Id>
 			</Content>
 		</Trigger>
 	</Triggers>
@@ -801,6 +856,16 @@
 			<Name>DisableEncoderStatus</Name>
 			<On id="10">parameter</On>
 			<Type id="20">copy</Type>
+		</Action>
+		<Action id="21">
+			<Name>DisableDecoderCurrentCompressedBitrate</Name>
+			<On id="16">parameter</On>
+			<Type id="20">copy</Type>
+		</Action>
+		<Action id="22">
+			<Name>EnableDecoderCurrentCompressedBitrate</Name>
+			<On id="16">parameter</On>
+			<Type id="21">copy</Type>
 		</Action>
 	</Actions>
 
