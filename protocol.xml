@@ -35,6 +35,12 @@
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<DefaultValue>1</DefaultValue>
+				<Exceptions>
+					<Exception id="1" value="0">
+						<Display state="disabled">N/A</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -50,7 +56,7 @@
 				<Type>discreet</Type>
 				<Discreets>
 					<Discreet>
-						<Display>Not Available</Display>
+						<Display>Disabled</Display>
 						<Value>0</Value>
 					</Discreet>
 					<Discreet>
@@ -83,11 +89,11 @@
 				<Type>togglebutton</Type>
 				<Discreets>
 					<Discreet>
-						<Display>Not Available</Display>
+						<Display state="disabled">N/A</Display>
 						<Value>0</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Enabled</Display>
+						<Display state="enabled">Enabled</Display>
 						<Value>1</Value>
 					</Discreet>
 				</Discreets>
@@ -104,6 +110,12 @@
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<DefaultValue>1</DefaultValue>
+				<Exceptions>
+					<Exception id="1" value="0">
+						<Display state="disabled">N/A</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -121,7 +133,7 @@
 				<Type>discreet</Type>
 				<Discreets>
 					<Discreet>
-						<Display>Not Available</Display>
+						<Display>N/A</Display>
 						<Value>0</Value>
 					</Discreet>
 					<Discreet>
@@ -142,6 +154,12 @@
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<DefaultValue>1</DefaultValue>
+				<Exceptions>
+					<Exception id="1" value="0">
+						<Display state="disabled">N/A</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -157,7 +175,7 @@
 				<Type>discreet</Type>
 				<Discreets>
 					<Discreet>
-						<Display>Not Available</Display>
+						<Display>N/A</Display>
 						<Value>0</Value>
 					</Discreet>
 					<Discreet>
@@ -190,11 +208,11 @@
 				<Type>togglebutton</Type>
 				<Discreets>
 					<Discreet>
-						<Display>Not Available</Display>
+						<Display state="disabled">N/A</Display>
 						<Value>0</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Enabled</Display>
+						<Display state="enabled">Enabled</Display>
 						<Value>1</Value>
 					</Discreet>
 				</Discreets>
@@ -213,7 +231,7 @@
 				<DefaultValue>50</DefaultValue>
 				<Exceptions>
 					<Exception id="1" value="0">
-						<Display state="disabled">Not Available</Display>
+						<Display state="disabled">N/A</Display>
 						<Value>0</Value>
 					</Exception>
 				</Exceptions>
@@ -237,7 +255,7 @@
 				<Type>discreet</Type>
 				<Discreets>
 					<Discreet>
-						<Display>Not Available</Display>
+						<Display>N/A</Display>
 						<Value>0</Value>
 					</Discreet>
 					<Discreet>
@@ -286,6 +304,12 @@
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<DefaultValue>1</DefaultValue>
+				<Exceptions>
+					<Exception id="1" value="0">
+						<Display state="disabled">N/A</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -301,7 +325,7 @@
 				<Type>discreet</Type>
 				<Discreets>
 					<Discreet>
-						<Display>Not Available</Display>
+						<Display>N/A</Display>
 						<Value>0</Value>
 					</Discreet>
 					<Discreet>
@@ -322,6 +346,12 @@
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
+				<Exceptions>
+					<Exception id="1" value="0">
+						<Display state="disabled">N/A</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -337,7 +367,7 @@
 				<Type>discreet</Type>
 				<Discreets>
 					<Discreet>
-						<Display>Not Available</Display>
+						<Display>Disabled</Display>
 						<Value>0</Value>
 					</Discreet>
 					<Discreet>
@@ -370,17 +400,17 @@
 				<Type>togglebutton</Type>
 				<Discreets>
 					<Discreet>
-						<Display>Not Available</Display>
+						<Display state="disabled">N/A</Display>
 						<Value>0</Value>
 					</Discreet>
 					<Discreet>
-						<Display>Enabled</Display>
+						<Display state="enabled">Enabled</Display>
 						<Value>1</Value>
 					</Discreet>
 				</Discreets>
 			</Measurement>
 		</Param>
-
+		
 		<Param id="16" trending="false">
 			<Name>CurrentCompressedBitrateDecoder</Name>
 			<Description>Current Compressed Bitrate</Description>
@@ -392,6 +422,12 @@
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<DefaultValue>0</DefaultValue>
+				<Exceptions>
+					<Exception id="1" value="0">
+						<Display state="disabled">N/A</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -409,7 +445,7 @@
 				<Type>discreet</Type>
 				<Discreets>
 					<Discreet>
-						<Display>Not Available</Display>
+						<Display>N/A</Display>
 						<Value>0</Value>
 					</Discreet>
 					<Discreet>
@@ -429,10 +465,10 @@
 				<RawType>other</RawType>
 				<Type>string</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>0</DefaultValue>
+				<DefaultValue>5</DefaultValue>
 				<Exceptions>
 					<Exception id="1" value="5">
-						<Display state="disabled">Not Available</Display>
+						<Display state="disabled">N/A</Display>
 						<Value>5</Value>
 					</Exception>
 				</Exceptions>
@@ -533,6 +569,12 @@
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<DefaultValue>0</DefaultValue>
+				<Exceptions>
+					<Exception id="1" value="0">
+						<Display state="disabled">N/A</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -549,11 +591,11 @@
 				<Type>discreet</Type>
 				<Discreets>
 					<Discreet>
-						<Display>Not Available</Display>
+						<Display>N/A</Display>
 						<Value>0</Value>
 					</Discreet>
 					<Discreet>
-						<Display>512</Display>
+						<Display>512 px</Display>
 						<Value>1</Value>
 					</Discreet>
 				</Discreets>
@@ -570,6 +612,12 @@
 				<Type>double</Type>
 				<LengthType>next param</LengthType>
 				<DefaultValue>0</DefaultValue>
+				<Exceptions>
+					<Exception id="1" value="0">
+						<Display state="disabled">N/A</Display>
+						<Value>0</Value>
+					</Exception>
+				</Exceptions>
 			</Interprete>
 			<Display>
 				<RTDisplay>true</RTDisplay>
@@ -586,11 +634,11 @@
 				<Type>discreet</Type>
 				<Discreets>
 					<Discreet>
-						<Display>Not Available</Display>
+						<Display>N/A</Display>
 						<Value>0</Value>
 					</Discreet>
 					<Discreet>
-						<Display>512</Display>
+						<Display>512 px</Display>
 						<Value>1</Value>
 					</Discreet>
 				</Discreets>
@@ -648,13 +696,19 @@
 			</Content>
 		</Group>
 		<Group id="3">
-			<Name>disableEncoderGroup</Name>
+			<Name>DisableEncoder</Name>
 			<Description>Disable All Parameters for Encoder</Description>
 			<Type>poll action</Type>
 			<Content>
 				<Action>3</Action>
 				<Action>4</Action>
 				<Action>5</Action>
+				<Action>9</Action>
+				<Action>11</Action>
+				<Action>16</Action>
+				<Action>17</Action>
+				<Action>18</Action>
+				<Action>22</Action>
 			</Content>
 		</Group>
 	</Groups>
@@ -669,37 +723,20 @@
 				<Id>1</Id>
 			</Content>
 		</Trigger>
-		<Trigger id="2">
-			<Name>disableEncoder</Name>
-			<On id="10">parameter</On>
-			<Time>change</Time>
-			<Type>action</Type>
-			<Content>
-			</Content>
-		</Trigger>
 		<Trigger id="3">
-			<Name>disableEncoder</Name>
+			<Name>DisableEncoder</Name>
 			<On id="10">parameter</On>
 			<Time>change</Time>
 			<Type>action</Type>
 			<Condition>
 				<![CDATA[id:10 == 0]]>
 			</Condition>
-			<!--This needs to be replaced transered to group-->
 			<Content>
-				<Id>3</Id>
-				<Id>4</Id>
-				<Id>5</Id>
-				<Id>9</Id>
-				<Id>11</Id>
-				<Id>16</Id>
-				<Id>17</Id>
-				<Id>18</Id>
-				<Id>22</Id>
+				<Id>23</Id>
 			</Content>
 		</Trigger>
 		<Trigger id="4">
-			<Name>enableEncoder</Name>
+			<Name>EnableEncoder</Name>
 			<On id="10">parameter</On>
 			<Time>change</Time>
 			<Type>action</Type>
@@ -719,7 +756,7 @@
 			</Content>
 		</Trigger>
 		<Trigger id="5">
-			<Name>disableDecoder</Name>
+			<Name>EnableDisableDecoder</Name>
 			<On id="15">parameter</On>
 			<Time>change</Time>
 			<Type>action</Type>
@@ -727,6 +764,7 @@
 				<![CDATA[id:15 == 0]]>
 			</Condition>
 			<Content>
+				<!--Disable Decoder and Enable Encoder-->
 				<Id>13</Id>
 				<Id>14</Id>
 				<Id>15</Id>
@@ -735,23 +773,12 @@
 				<Id>8</Id>
 				<Id>19</Id>
 				<Id>21</Id>
-			</Content>
-		</Trigger>
-		<Trigger id="6">
-			<Name>EnableDecoder</Name>
-			<On id="15">parameter</On>
-			<Time>change</Time>
-			<Type>action</Type>
-			<Condition>
-				<![CDATA[id:15 == 1]]>
-			</Condition>
-			<Content>
-
-				<Id>20</Id>
-				<Id>18</Id>
-				<Id>17</Id>
-				<Id>16</Id>
-				<Id>22</Id>
+				<!--Disable Encoder and Enable Decoder-->
+				<Id else="true">20</Id>
+				<Id else="true">18</Id>
+				<Id else="true">17</Id>
+				<Id else="true">16</Id>
+				<Id else="true">22</Id>
 			</Content>
 		</Trigger>
 	</Triggers>
@@ -866,6 +893,11 @@
 			<Name>EnableDecoderCurrentCompressedBitrate</Name>
 			<On id="16">parameter</On>
 			<Type id="21">copy</Type>
+		</Action>
+		<Action id="23">
+			<Name>EnableDisableEncoder</Name>
+			<On id="3">group</On>
+			<Type>execute next</Type>
 		</Action>
 	</Actions>
 
