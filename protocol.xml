@@ -258,16 +258,12 @@
 						<Display>N/A</Display>
 						<Value>0</Value>
 					</Discreet>
-					<Discreet>
-						<Display>24</Display>
-						<Value>1</Value>
-					</Discreet>
 				</Discreets>
 			</Measurement>
 		</Param>
 		<Param id="113" setter="true">
 			<Name>ChromaWeight</Name>
-			<Description>description</Description>
+			<Description>Setter Chroma Weight</Description>
 			<Type>write</Type>
 			<Interprete>
 				<RawType>numeric text</RawType>
@@ -410,7 +406,7 @@
 				</Discreets>
 			</Measurement>
 		</Param>
-		
+
 		<Param id="16" trending="false">
 			<Name>CurrentCompressedBitrateDecoder</Name>
 			<Description>Current Compressed Bitrate</Description>
@@ -456,7 +452,7 @@
 			</Measurement>
 		</Param>
 		<Param id="17" trending="false">
-			<Name>progressionOrder</Name>
+			<Name>ProgressionOrder</Name>
 			<Description>Progression Order</Description>
 			<Type>read</Type>
 			<Information>
@@ -602,7 +598,7 @@
 			</Measurement>
 		</Param>
 		<Param id="19" trending="false">
-			<Name>codeBlockHeight</Name>
+			<Name>CodeBlockHeight</Name>
 			<Description>Code Block Height</Description>
 			<Type>read</Type>
 			<Information>
@@ -680,6 +676,26 @@
 				<Value>5</Value>
 			</Interprete>
 		</Param>
+		<Param id="23">
+			<Name>ChromaWeightDummyParameter</Name>
+			<Description>ChromaWeightDummyParameter</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+		</Param>
+		<Param id="24">
+			<Name>ProgressionOrderDummyParameter</Name>
+			<Description>Progression Order Dummy Parameter</Description>
+			<Type>read</Type>
+			<Interprete>
+				<RawType>numeric text</RawType>
+				<Type>double</Type>
+				<LengthType>next param</LengthType>
+			</Interprete>
+		</Param>
 	</Params>
 	<QActions>
 		<QAction id="1" name="Precompiled Code" encoding="csharp" options="precompile" />
@@ -700,6 +716,7 @@
 			<Description>Disable All Parameters for Encoder</Description>
 			<Type>poll action</Type>
 			<Content>
+				<Action>24</Action>
 				<Action>3</Action>
 				<Action>4</Action>
 				<Action>5</Action>
@@ -724,7 +741,7 @@
 			</Content>
 		</Trigger>
 		<Trigger id="3">
-			<Name>DisableEncoder</Name>
+			<Name>ToggleEncoder</Name>
 			<On id="10">parameter</On>
 			<Time>change</Time>
 			<Type>action</Type>
@@ -732,27 +749,24 @@
 				<![CDATA[id:10 == 0]]>
 			</Condition>
 			<Content>
-				<Id>23</Id>
-			</Content>
-		</Trigger>
-		<Trigger id="4">
-			<Name>EnableEncoder</Name>
-			<On id="10">parameter</On>
-			<Time>change</Time>
-			<Type>action</Type>
-			<Condition>
-				<![CDATA[id:10 == 1]]>
-			</Condition>
-			<Content>
-				<Id>6</Id>
-				<Id>7</Id>
-				<Id>8</Id>
-				<Id>10</Id>
-				<Id>12</Id>
-				<Id>13</Id>
-				<Id>14</Id>
-				<Id>15</Id>
-				<Id>21</Id>
+				<Id>3</Id>
+				<Id>4</Id>
+				<Id>5</Id>
+				<Id>9</Id>
+				<Id>11</Id>
+				<Id>16</Id>
+				<Id>17</Id>
+				<Id>18</Id>
+				<Id>22</Id>
+				<Id else="true">6</Id>
+				<Id else="true">7</Id>
+				<Id else="true">25</Id>
+				<Id else="true">8</Id>
+				<Id else="true">12</Id>
+				<Id else="true">13</Id>
+				<Id else="true">14</Id>
+				<Id else="true">15</Id>
+				<Id else="true">21</Id>
 			</Content>
 		</Trigger>
 		<Trigger id="5">
@@ -768,17 +782,39 @@
 				<Id>13</Id>
 				<Id>14</Id>
 				<Id>15</Id>
+				<Id>21</Id>
+				<Id>19</Id>
 				<Id>6</Id>
 				<Id>7</Id>
+				<Id>25</Id>
 				<Id>8</Id>
-				<Id>19</Id>
-				<Id>21</Id>
 				<!--Disable Encoder and Enable Decoder-->
 				<Id else="true">20</Id>
 				<Id else="true">18</Id>
 				<Id else="true">17</Id>
 				<Id else="true">16</Id>
 				<Id else="true">22</Id>
+			</Content>
+		</Trigger>
+		<Trigger id="6">
+			<Name>SaveToDummy</Name>
+			<On id="13">parameter</On>
+			<Time>change</Time>
+			<Type>action</Type>
+			<Condition>
+				<![CDATA[id:13 != 0]]>
+			</Condition>
+			<Content>
+				<Id>24</Id>
+			</Content>
+		</Trigger>
+		<Trigger id="7">
+			<Name>Set Chroma Weight</Name>
+			<On id="113">parameter</On>
+			<Time>change</Time>
+			<Type>action</Type>
+			<Content>
+				<Id>26</Id>
 			</Content>
 		</Trigger>
 	</Triggers>
@@ -828,11 +864,6 @@
 			<Name>SetChromaWeightToZero</Name>
 			<On id="13">parameter</On>
 			<Type id="20">copy</Type>
-		</Action>
-		<Action id="10">
-			<Name>SetChromaWeight</Name>
-			<On id="13">parameter</On>
-			<Type id="21">copy</Type>
 		</Action>
 		<Action id="11">
 			<Name>EnableDecoderStatus</Name>
@@ -898,6 +929,21 @@
 			<Name>EnableDisableEncoder</Name>
 			<On id="3">group</On>
 			<Type>execute next</Type>
+		</Action>
+		<Action id="24">
+			<Name>SaveToChromaWeightDummyParam</Name>
+			<On id="23">parameter</On>
+			<Type id="13">copy</Type>
+		</Action>
+		<Action id="25">
+			<Name>SaveFromDummyParamToChromaWeight</Name>
+			<On id="13">parameter</On>
+			<Type id="23">copy</Type>
+		</Action>
+		<Action id="26">
+			<Name>Copy Write to Read Chroma</Name>
+			<On id="13">parameter</On>
+			<Type id="113">copy</Type>
 		</Action>
 	</Actions>
 

@@ -58,6 +58,16 @@ public static class Parameter
 	public const int codeblockheight_19 = 19;
 	/// <summary>PID: 19 | Type: read</summary>
 	public const int codeblockheight = 19;
+	/// <summary>PID: 23 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int chromaweightdummyparameter_23 = 23;
+	/// <summary>PID: 23 | Type: read</summary>
+	public const int chromaweightdummyparameter = 23;
+	/// <summary>PID: 24 | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public const int progressionorderdummyparameter_24 = 24;
+	/// <summary>PID: 24 | Type: read</summary>
+	public const int progressionorderdummyparameter = 24;
 	public class Write
 	{
 		/// <summary>PID: 110 | Type: write</summary>
@@ -131,6 +141,10 @@ public interface SLProtocolExt : SLProtocol
 	object Fixedzero__fixed { get; set; }
 	object Fixedone__fixed { get; set; }
 	object Fixedfive__fixed { get; set; }
+	object Chromaweightdummyparameter_23 { get; set; }
+	object Chromaweightdummyparameter { get; set; }
+	object Progressionorderdummyparameter_24 { get; set; }
+	object Progressionorderdummyparameter { get; set; }
 	object Status_110 { get; set; }
 	object Autochromaweight_112 { get; set; }
 	object Chromaweight_113 { get; set; }
@@ -157,10 +171,10 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Autochromaweight_12 {get { return GetParameter(12); }set { SetParameter(12, value); }}
 	/// <summary>PID: 12  | Type: read | DISCREETS: N/A = 0, Enabled = 1 | EXCEPTIONS: N/A = 0</summary>
 	public System.Object Autochromaweight {get { return GetParameter(12); }set { SetParameter(12, value); }}
-	/// <summary>PID: 13  | Type: read | DISCREETS: N/A = 0, 24 = 1 | EXCEPTIONS: N/A = 0</summary>
+	/// <summary>PID: 13  | Type: read | DISCREETS: N/A = 0 | EXCEPTIONS: N/A = 0</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Chromaweight_13 {get { return GetParameter(13); }set { SetParameter(13, value); }}
-	/// <summary>PID: 13  | Type: read | DISCREETS: N/A = 0, 24 = 1 | EXCEPTIONS: N/A = 0</summary>
+	/// <summary>PID: 13  | Type: read | DISCREETS: N/A = 0 | EXCEPTIONS: N/A = 0</summary>
 	public System.Object Chromaweight {get { return GetParameter(13); }set { SetParameter(13, value); }}
 	/// <summary>PID: 14  | Type: read | DISCREETS: N/A = 0, Enabled = 1 | EXCEPTIONS: N/A = 0</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
@@ -198,6 +212,16 @@ public class ConcreteSLProtocolExt : ConcreteSLProtocol, SLProtocolExt
 	public System.Object Fixedone__fixed {get { return GetParameter(21); }set { SetParameter(21, value); }}
 	/// <summary>PID: 22  | Type: fixed</summary>
 	public System.Object Fixedfive__fixed {get { return GetParameter(22); }set { SetParameter(22, value); }}
+	/// <summary>PID: 23  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Chromaweightdummyparameter_23 {get { return GetParameter(23); }set { SetParameter(23, value); }}
+	/// <summary>PID: 23  | Type: read</summary>
+	public System.Object Chromaweightdummyparameter {get { return GetParameter(23); }set { SetParameter(23, value); }}
+	/// <summary>PID: 24  | Type: read</summary>
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public System.Object Progressionorderdummyparameter_24 {get { return GetParameter(24); }set { SetParameter(24, value); }}
+	/// <summary>PID: 24  | Type: read</summary>
+	public System.Object Progressionorderdummyparameter {get { return GetParameter(24); }set { SetParameter(24, value); }}
 	/// <summary>PID: 110  | Type: write | DISCREETS: N/A = 0, Enabled = 1</summary>
 	[EditorBrowsable(EditorBrowsableState.Never)]
 	public System.Object Status_110 {get { return GetParameter(110); }set { SetParameter(110, value); }}
