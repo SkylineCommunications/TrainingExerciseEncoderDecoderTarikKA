@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿﻿<?xml version="1.0" encoding="utf-8" ?>
 <Protocol xmlns="http://www.skyline.be/protocol">
 	<Name>Training Exercise Encoder Decoder</Name>
 	<Description>Training Exercise Encoder/Decoder DataMiner connector</Description>
@@ -406,7 +406,7 @@
 				</Discreets>
 			</Measurement>
 		</Param>
-
+		
 		<Param id="16" trending="false">
 			<Name>CurrentCompressedBitrateDecoder</Name>
 			<Description>Current Compressed Bitrate</Description>
@@ -463,7 +463,7 @@
 				<LengthType>next param</LengthType>
 				<DefaultValue>5</DefaultValue>
 				<Exceptions>
-					<Exception id="1" value="5">
+					<Exception id="1" value="-1">
 						<Display state="disabled">N/A</Display>
 						<Value>5</Value>
 					</Exception>
@@ -501,10 +501,6 @@
 					<Discreet>
 						<Display>CPRL</Display>
 						<Value>4</Value>
-					</Discreet>
-					<Discreet>
-						<Display></Display>
-						<Value>5</Value>
 					</Discreet>
 				</Discreets>
 			</Measurement>
@@ -598,20 +594,20 @@
 			</Measurement>
 		</Param>
 		<Param id="19" trending="false">
-			<Name>CodeBlockHeight</Name>
+			<Name>CodeBlockHeigh</Name>
 			<Description>Code Block Height</Description>
 			<Type>read</Type>
 			<Information>
 			</Information>
 			<Interprete>
-				<RawType>numeric text</RawType>
-				<Type>double</Type>
+				<RawType>other</RawType>
+				<Type>string</Type>
 				<LengthType>next param</LengthType>
-				<DefaultValue>0</DefaultValue>
+				<DefaultValue>Test</DefaultValue>
 				<Exceptions>
-					<Exception id="1" value="0">
-						<Display state="disabled">N/A</Display>
-						<Value>0</Value>
+					<Exception id="1" value="-1">
+						<Display>N/A</Display>
+						<Value>-1</Value>
 					</Exception>
 				</Exceptions>
 			</Interprete>
@@ -627,17 +623,7 @@
 				</Positions>
 			</Display>
 			<Measurement>
-				<Type>discreet</Type>
-				<Discreets>
-					<Discreet>
-						<Display>N/A</Display>
-						<Value>0</Value>
-					</Discreet>
-					<Discreet>
-						<Display>512 px</Display>
-						<Value>1</Value>
-					</Discreet>
-				</Discreets>
+				<Type>string</Type>
 			</Measurement>
 		</Param>
 		<Param id="20">
@@ -665,15 +651,15 @@
 			</Interprete>
 		</Param>
 		<Param id="22">
-			<Name>fixedFive</Name>
-			<Description>Const Five</Description>
+			<Name>fixedMinusOne</Name>
+			<Description>Const Minus One</Description>
 			<Type>fixed</Type>
 			<Interprete>
 				<RawType>numeric text</RawType>
 				<Type>double</Type>
 				<LengthType>fixed</LengthType>
 				<Length>1</Length>
-				<Value>5</Value>
+				<Value>-1</Value>
 			</Interprete>
 		</Param>
 		<Param id="23">
@@ -716,16 +702,6 @@
 			<Description>Disable All Parameters for Encoder</Description>
 			<Type>poll action</Type>
 			<Content>
-				<Action>24</Action>
-				<Action>3</Action>
-				<Action>4</Action>
-				<Action>5</Action>
-				<Action>9</Action>
-				<Action>11</Action>
-				<Action>16</Action>
-				<Action>17</Action>
-				<Action>18</Action>
-				<Action>22</Action>
 			</Content>
 		</Group>
 	</Groups>
@@ -752,6 +728,7 @@
 				<Id>3</Id>
 				<Id>4</Id>
 				<Id>5</Id>
+				<Id>24</Id>
 				<Id>9</Id>
 				<Id>11</Id>
 				<Id>16</Id>
@@ -888,7 +865,7 @@
 		<Action id="15">
 			<Name>DisableCodeBlockHeight</Name>
 			<On id="19">parameter</On>
-			<Type id="20">copy</Type>
+			<Type id="22">copy</Type>
 		</Action>
 		<Action id="16">
 			<Name>EnableProgressionOrder</Name>
@@ -1000,5 +977,4 @@
 			</Branch>
 		</Branches>
 	</VersionHistory>
-
 </Protocol>
